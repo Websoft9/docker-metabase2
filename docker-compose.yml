@@ -1,3 +1,6 @@
+# docs: https://www.metabase.com/docs/latest/operations-guide/running-metabase-on-docker.html
+# image: https://hub.docker.com/r/metabase/metabase
+
 version: '3.8'
 services:
   metabase:
