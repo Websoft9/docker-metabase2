@@ -10,7 +10,7 @@ services:
     volumes: 
      - /dev/urandom:/dev/random:ro
      - metabase-data:/metabase-data
-     - metabase-plugins:/plugins
+     - $VOLUMES_PATH_PREFIX/metabase/plugins:/plugins
     ports:
       - $APP_PORT:3000
     privileged: true
@@ -44,7 +44,6 @@ services:
 volumes:
   mysql:
   metabase-data:
-  metabase-plugin:
   
 networks:
   default:
