@@ -47,4 +47,4 @@ curl -s "http://${METABASE_HOST}:${METABASE_PORT}/api/user" \
     -H "X-Metabase-Session: ${MB_TOKEN}" \
     -d '{"first_name":"Basic 2","last_name":"User","email":"basic2@somewhere.com","login_attributes":{"region_filter":"CA"},"password":"'${ADMIN_PASSWORD}'"}'
 
-echo -e "\n👥 Basic users created!
+echo -e "\n👥 Basic users created!"
