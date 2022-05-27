@@ -6,7 +6,7 @@ services:
   metabase:
     image: metabase/metabase:$APP_VERSION
     container_name: $APP_NAME
-    hostname: metabase
+    hostname: $APP_NAME
     volumes: 
      - /dev/urandom:/dev/random:ro
      - metabase-data:/metabase-data
@@ -19,10 +19,9 @@ services:
       JAVA_TIMEZONE: $APP_TIMEZONE
       MB_DB_TYPE: $MB_DB_TYPE
       MB_DB_DBNAME: $DB_MYSQL_NAME
-      MB_DB_PORT: $DB_MYSQL_PORT
       MB_DB_USER: $DB_MYSQL_USER
       MB_DB_PASS: $DB_MYSQL_PASSWORD
-      MB_DB_HOST: $DB_MYSQL_HOST
+      MB_DB_HOST: mysql
     depends_on: 
       - mysql
 
