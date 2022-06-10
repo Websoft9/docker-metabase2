@@ -5,6 +5,7 @@ version: '3.8'
 services:
   metabase:
     image: metabase/metabase:$APP_VERSION
+    restart: always
     container_name: $APP_NAME
     hostname: $APP_NAME
     volumes: 
